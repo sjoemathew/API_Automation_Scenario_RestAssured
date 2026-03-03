@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.rest-assured:rest-assured:5.4.0'
+    implementation 'io.rest-assured:json-schema-validator:5.4.0'
+    // Also add these if you don't have them already
+    //implementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    implementation 'org.hamcrest:hamcrest:2.2'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+   // implementation 'org.junit.jupiter:junit-jupiter-params'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params'
+}
+
+test {
+    useJUnitPlatform()
+}
